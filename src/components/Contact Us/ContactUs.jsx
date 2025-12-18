@@ -13,7 +13,7 @@ const ContactUs = () => {
       <div className="relative h-[40vh] md:h-100 bg-black/50 w-full">
         <picture>
           <source srcSet={AboutBgImg} type="image/webp" />
-          <img className="object-cover h-full w-full" src={HomeBgImg3} alt="Contact Hero" />
+          <img className="object-cover h-full w-full" src={HomeBgImg3} loading="lazy" alt="Contact Hero" />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/30 flex items-center justify-center">
           <h1 className="text-white tracking-tight border-2 border-white text-3xl md:text-[44px] font-normal px-8 py-4 md:max-w-100 mx-auto text-center">

@@ -22,6 +22,7 @@ const AboutUs = () => {
           <img
             className="object-cover w-full h-full"
             src={HomeBgImg3}
+            loading="lazy"
             alt="Stadplus Interior"
           />
         </picture>
