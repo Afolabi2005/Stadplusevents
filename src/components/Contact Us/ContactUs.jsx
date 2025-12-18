@@ -29,7 +29,7 @@ const ContactUs = () => {
     setLoading(true);
     console.log("3. Sending to EmailJS...");
 
-    const SERVICE_ID = "service_fdc3o6f";
+    const SERVICE_ID = "service_jk4ggpu";
     const TEMPLATE_ID = "template_91dcma4";
     const PUBLIC_KEY = "nswnc5vvN8iBEvAyN";
 
