@@ -12,7 +12,7 @@ const Navbar = ({ active, setActive }) => {
   const menu = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Our Halls", path: "/halls" },
+    { name: "Our Halls", path: "/our-halls" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact us", path: "/contact-us" },
   ];

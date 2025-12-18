@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Navbar from "./components/Home/Navbar";
 import AboutUs from "./components/About Us/AboutUs";
 import ContactUs from "./components/Contact Us/ContactUs";
+import Halls from "./components/Our Halls/Halls";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/our-halls" element={<Halls />} />
       </Routes>
     </div>
   );
