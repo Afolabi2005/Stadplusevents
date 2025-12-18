@@ -1,5 +1,5 @@
 import React from "react";
-import HomeBgImg3 from "../../assets/Img2.jpg";
+import HomeBgImg3 from "../../assets/img2.jpg";
 import AboutBgImg from "../../assets/Img2.webp";
 import HomeBg from "../../assets/HomeHall.avif";
 import Footer from "../Home/Footer";
