@@ -67,7 +67,7 @@ const Footer = () => {
             </p>
             <a
               className="underline text-[#C7A34B] hover:text-white transition-colors text-sm"
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/Gomsx9kofKwR6Q3CA"
               target="_blank"
               rel="noopener noreferrer"
             >
