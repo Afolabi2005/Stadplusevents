@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import HomeBgImg3 from "../../assets/Img2.jpg";
-import AboutBgImg from "../../assets/Img2.webp";
+import HomeBgImg3 from "../../assets/img2.jpg";
+import AboutBgImg from "../../assets/img2.webp";
 import smartphone from "../../assets/icons8-smartphone-50.png";
 import email from "../../assets/icons8-email-64.png";
 import location from "../../assets/icons8-location-50.png";
