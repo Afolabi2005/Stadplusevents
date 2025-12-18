@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  BsTelephone,
-  BsWhatsapp,
-  BsInstagram,
-  BsFacebook,
-} from "react-icons/bs";
-import Logo from "../../assets/stadplus-EventLogo.png";
-import phone from "../../assets/icons8-call-24.png";
 import HomeImg2 from "../../assets/Img1.webp";
-import HomeImg3 from "../../assets/Img2.webp";
 import HomeBg from "../../assets/HomeHall.avif";
 import HomeBgImg from "../../assets/HomeHall.jpg";
 import HomeBgImg2 from "../../assets/Img1.jpg";
@@ -50,7 +41,6 @@ const Home = () => {
         </div>
         <div className="mt-16 w-full h-200.5 bg-gray-500">
           <picture>
-            <source srcSet={HomeImg3} type="image/webp" />
             <img
               src={HomeBgImg3}
               className="object-cover w-full h-200.5"
