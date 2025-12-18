@@ -1,81 +1,104 @@
 import React from "react";
-import Logo from "../../assets/stadplus-EventLogo.png";
 import {
   BsTelephone,
   BsWhatsapp,
   BsInstagram,
   BsFacebook,
 } from "react-icons/bs";
+import Logo from "../../assets/stadplus-EventLogo.png";
 
 const Footer = () => {
   const IconWrapper = ({ icon, href, color }) => (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`text-gray-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 ${color}`}
     >
       {icon}
     </a>
   );
+
   return (
-    <div className="pt-16 bg-[#393939]">
-      <div className="flex justify-between px-8 pb-8 text-white">
-        <div>
-          <header>
-            <div className="flex justify-start">
-              <img className="w-50" src={Logo} alt="" />
-            </div>
-          </header>
-          <div className="flex justify-start">
-            <div className="flex flex-row items-center justify-center gap-4 px-12 p-2 border-white/10 rounded-full w-fit">
-              {/* Phone */}
-              <IconWrapper
-                icon={<BsTelephone size={19} />}
-                href="tel:+2349052222555"
-                color="hover:text-gray-900 dark:hover:text-white"
-              />
+    <footer className="pt-12 md:pt-16 bg-[#393939] text-white">
+      {/* Main Footer Content */}
+      <div className="flex flex-col md:flex-row justify-between items-center md:items-start px-6 md:px-16 gap-12 pb-12">
+        {/* Logo & Socials Section */}
+        <div className="flex flex-col items-center md:items-start gap-6">
+          <img
+            className="w-40 md:w-52 object-contain"
+            src={Logo}
+            alt="Stadplus Logo"
+          />
 
-              {/* WhatsApp */}
-              <IconWrapper
-                icon={<BsWhatsapp size={19} />}
-                href="https://wa.me/+2349052222555"
-                color="hover:text-[#25D366]"
-              />
-
-              {/* Instagram */}
-              <IconWrapper
-                icon={<BsInstagram size={19} />}
-                href="https://instagram.com/stadplusevents"
-                color="hover:text-[#E1306C]"
-              />
-
-              {/* Facebook */}
-              <IconWrapper
-                icon={<BsFacebook size={19} />}
-                href="https://facebook.com"
-                color="hover:text-[#1877F2]"
-              />
-            </div>
+          <div className="flex flex-row items-center gap-6">
+            <IconWrapper
+              icon={<BsTelephone size={20} />}
+              href="tel:+2349052222555"
+              color="hover:text-white"
+            />
+            <IconWrapper
+              icon={<BsWhatsapp size={20} />}
+              href="https://wa.me/+2349052222555"
+              color="hover:text-[#25D366]"
+            />
+            <IconWrapper
+              icon={<BsInstagram size={20} />}
+              href="https://instagram.com/stadplusevents"
+              color="hover:text-[#E1306C]"
+            />
+            <IconWrapper
+              icon={<BsFacebook size={20} />}
+              href="https://facebook.com"
+              color="hover:text-[#1877F2]"
+            />
           </div>
         </div>
-        <div className="flex flex-row justify-between gap-8 px-16">
-            <div className="flex flex-col gap-4">
-                <h1 className="text-2xl text-[#C7A34B]">Address</h1>
-                <p>Ikeja hall- Xpress House, off Jobi Fele Way, Alausa- Ikeja</p>
-                <a className="underline text-white" href="https://google.com/maps/stadplus-events">View on Maps</a>
+
+        {/* Info Section: Address and Inquiries */}
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20 text-center md:text-left">
+          {/* Address */}
+          <div className="flex flex-col gap-3 max-w-xs">
+            <h1 className="text-xl md:text-2xl text-[#C7A34B] font-semibold">
+              Address
+            </h1>
+            <p className="text-sm md:text-base leading-relaxed text-gray-300">
+              Ikeja hall - Xpress House, off Jobi Fele Way, Alausa-Ikeja, Lagos.
+            </p>
+            <a
+              className="underline text-[#C7A34B] hover:text-white transition-colors text-sm"
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on Maps
+            </a>
+          </div>
+
+          {/* Inquiries */}
+          <div className="flex flex-col gap-3">
+            <h1 className="text-xl md:text-2xl text-[#C7A34B] font-semibold">
+              Inquiries
+            </h1>
+            <div className="text-sm md:text-base text-gray-300 space-y-1">
+              <p>+234 905 2222 555</p>
+              <p>+234 905 2222 666</p>
+              <p>+234 811 1002 999</p>
             </div>
-            <div className="flex flex-col gap-4">
-                <h1 className="text-2xl text-[#C7A34B]">Inquiries</h1>
-                <p>Tel: +234905 2222 555, +234905 2222 666, +234811 1002 999</p>
-                <p>stadplusevents@gmail.com</p>
-            </div>
+            <p className="text-[#C7A34B] text-sm mt-2">
+              stadplusevents@gmail.com
+            </p>
+          </div>
         </div>
       </div>
 
-      <div></div>
-      <div className="flex bg-[#c7a34b] p-3 justify-center mt-4">
-        <p className="text-white">© 2023 STADPLUS. ALL RIGHTS RESERVED</p>
+      {/* Copyright Bar */}
+      <div className="bg-[#c7a34b] py-4 text-center">
+        <p className="text-white text-xs md:text-sm tracking-widest font-medium">
+          © {new Date().getFullYear()} STADPLUS. ALL RIGHTS RESERVED
+        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

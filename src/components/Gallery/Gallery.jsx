@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Home/Navbar";
+import Footer from "../Home/Footer";
 
 const Gallery = () => {
     const galleries = [
@@ -59,7 +60,7 @@ const Gallery = () => {
           A VISUAL JOURNEY
         </h1>
         <hr className="w-[20%] absolute left-[40%] right-[40%] text-[#c7a34b]" />
-        <div className="grid grid-cols-3 justify-around gap-4 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-around gap-4 p-8">
           {galleries.map((gallery) => (
             <div className="w-full h-80 bg-gray-400" key={gallery.id}>
               <img src={gallery.image} alt={gallery.title} />
@@ -67,6 +68,7 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

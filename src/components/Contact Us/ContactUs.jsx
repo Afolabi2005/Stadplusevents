@@ -1,94 +1,103 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import HomeBgImg3 from "../../assets/img2.jpg";
 import AboutBgImg from "../../assets/img2.webp";
 import smartphone from "../../assets/icons8-smartphone-50.png";
-import email from "../../assets/icons8-email-64.png";
-import location from "../../assets/icons8-location-50.png";
+import emailIcon from "../../assets/icons8-email-64.png";
+import locationIcon from "../../assets/icons8-location-50.png";
 import Footer from "../Home/Footer";
 
 const ContactUs = () => {
   return (
-    <div>
-      <div className="relative h-100 bg-black/50 w-full">
+    <div className="overflow-x-hidden">
+      {/* HERO SECTION */}
+      <div className="relative h-[40vh] md:h-100 bg-black/50 w-full">
         <picture>
           <source srcSet={AboutBgImg} type="image/webp" />
-          <img className="object-cover h-100 w-full" src={HomeBgImg3} alt="" />
+          <img className="object-cover h-full w-full" src={HomeBgImg3} alt="Contact Hero" />
         </picture>
-        <div className="absolute inset-0 bg-linear-to-t pt-32 pb-8 from-black/90 to-black/30">
-          <h1 className="text-white tracking-tight border-2 border-white text-[44px] font-normal max-w-100 mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/30 flex items-center justify-center">
+          <h1 className="text-white tracking-tight border-2 border-white text-3xl md:text-[44px] font-normal px-8 py-4 md:max-w-100 mx-auto text-center">
             CONTACT US
           </h1>
         </div>
       </div>
-      <div className="p-16">
-        <h1 className="text-center mb-16 text-[#c7a34b] font-medium text-[24px] italic">
+
+      <div className="px-6 py-12 md:p-16">
+        <h1 className="text-center mb-10 md:mb-16 text-[#c7a34b] font-medium text-xl md:text-[24px] italic">
           Get in touch with us!
         </h1>
-        <div className="flex justify-center gap-3">
-          <div className="flex flex-col justify-center gap-2 py-4 px-8 border-r-2 border-[#c7a34b] max-w-75">
-            <img className="w-12.5 mx-auto" src={smartphone} alt="" />
-            <h1 className="text-center text-[#c7a34b] font-medium text-[18px]">
-              PHONE
-            </h1>
-            <h1 className="text-[14px]">Tel: +234 905 222 2555</h1>
-            <h1 className="text-[14px]">Tel: +234 905 222 2555</h1>
+
+        {/* CONTACT INFO CARDS - Stacked on mobile, row on desktop */}
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8 md:gap-0">
+          {/* PHONE */}
+          <div className="flex flex-col items-center gap-3 py-6 px-8 md:border-r-2 border-[#c7a34b] w-full md:max-w-xs">
+            <img className="w-10 md:w-12.5" src={smartphone} alt="Phone" />
+            <h2 className="text-[#c7a34b] font-semibold text-lg">PHONE</h2>
+            <div className="text-center text-sm md:text-base">
+              <p>+234 905 222 2555</p>
+              <p>+234 905 222 2555</p>
+            </div>
           </div>
-          <div className="flex flex-col justify-center gap-2 py-4 px-8 border-r-2 border-[#c7a34b] max-w-75">
-            <img
-              className="w-12.5 align-middle items-center mx-auto"
-              src={location}
-              alt=""
-            />
-            <h1 className="text-center text-[#c7a34b] font-medium text-[18px] ">
-              ADDRESS
-            </h1>
-            <h1 className="text-[14px] text-center">
-              Ikeja hall- Xpress House, off Jobi Fele Way, Alausa- Ikeja
-            </h1>
+
+          {/* ADDRESS */}
+          <div className="flex flex-col items-center gap-3 py-6 px-8 md:border-r-2 border-[#c7a34b] w-full md:max-w-xs">
+            <img className="w-10 md:w-12.5" src={locationIcon} alt="Location" />
+            <h2 className="text-[#c7a34b] font-semibold text-lg">ADDRESS</h2>
+            <p className="text-sm md:text-base text-center">
+              Ikeja hall - Xpress House, off Jobi Fele Way, Alausa-Ikeja
+            </p>
           </div>
-          <div className="flex flex-col justify-center gap-2 py-4 px-8 max-w-75">
-            <img className="w-12.5 mx-auto" src={email} alt="" />
-            <h1 className="text-center text-[#c7a34b] font-medium text-[18px]">
-              EMAIL
-            </h1>
-            <h1 className="text-[14px]">stadplusevents@gmail.com</h1>
+
+          {/* EMAIL */}
+          <div className="flex flex-col items-center gap-3 py-6 px-8 w-full md:max-w-xs">
+            <img className="w-10 md:w-12.5" src={emailIcon} alt="Email" />
+            <h2 className="text-[#c7a34b] font-semibold text-lg">EMAIL</h2>
+            <p className="text-sm md:text-base">stadplusevents@gmail.com</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 justify-center mt-16 mb-8 ">
-          <form className="max-w-100" action="">
-            <div className="flex flex-col gap-4 mt-16 max-w-500 mx-auto">
+
+        {/* FORM & MAP GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16 md:mt-24 mb-8">
+          {/* FORM */}
+          <div className="w-full">
+            <h2 className="text-2xl font-serif mb-6 text-gray-800">Send us a message</h2>
+            <form className="flex flex-col gap-4">
               <input
-                className="p-3 border border-gray-400 rounded-lg"
+                className="p-3 border border-gray-300 rounded-lg focus:outline-[#c7a34b]"
                 type="text"
                 placeholder="Your Name"
+                required
               />
               <input
-                className="p-3 border border-gray-400 rounded-lg"
+                className="p-3 border border-gray-300 rounded-lg focus:outline-[#c7a34b]"
                 type="email"
                 placeholder="Your Email"
+                required
               />
               <input
-                className="p-3 border border-gray-400 rounded-lg"
+                className="p-3 border border-gray-300 rounded-lg focus:outline-[#c7a34b]"
                 type="text"
                 placeholder="Subject"
               />
               <textarea
-                className="p-3 border border-gray-400 rounded-lg h-50"
+                className="p-3 border border-gray-300 rounded-lg h-40 focus:outline-[#c7a34b] resize-none"
                 placeholder="Your Message"
+                required
               ></textarea>
-              <button className="bg-[#c7a34b] text-white py-3 rounded-lg hover:bg-[#b5943f] transition-all duration-300">
+              <button className="bg-[#c7a34b] text-white py-4 rounded-lg font-semibold hover:bg-[#b5943f] transition-all duration-300 shadow-lg">
                 Book A Space
               </button>
-            </div>
-          </form>
-          <div className="w-full h-120">
+            </form>
+          </div>
+
+          {/* MAP */}
+          <div className="w-full h-[400px] lg:h-auto min-h-[400px] rounded-xl overflow-hidden shadow-inner">
             <iframe
-              className="w-full h-full mt-16"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.042263194257!2d3.3425292743106593!3d6.601006023956899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b0f4f4f4f4f%3A0x4f4f4f4f4f4f4f4f!2sIkeja%20Hall%20-%20Xpress%20House!5e0!3m2!1sen!2sng!4v1616161616161!5m2!1sen!2sng"
-              style={{ border: 0 }}
+              className="w-full h-full border-0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.2!2d3.3!3d6.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzYnMDAuMCJOIDPCsDE4JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
               allowFullScreen
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
