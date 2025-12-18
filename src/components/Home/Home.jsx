@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import HomeImg2 from "../../assets/Img1.webp";
 import HomeBg from "../../assets/HomeHall.avif";
 import HomeBgImg from "../../assets/HomeHall.jpg";
@@ -8,6 +9,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom"; // Added for the button
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="overflow-x-hidden">
       {/* HERO SECTION - Responsive Height */}
@@ -89,7 +91,7 @@ const Home = () => {
 
           <div className="mt-8">
             <Link to="/gallery">
-              <button className="w-full md:w-auto md:px-40 rounded-lg text-white py-4 cursor-pointer bg-[#c7a34b] hover:bg-[#b08e3d] transition-colors font-medium">
+              <button onClick={() => navigate("/gallery")} className="w-full md:w-auto md:px-40 rounded-lg text-white py-4 cursor-pointer bg-[#c7a34b] hover:bg-[#b08e3d] transition-colors font-medium">
                 View Gallery
               </button>
             </Link>
